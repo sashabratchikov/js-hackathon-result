@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COVID-19</title>
+  <link rel="stylesheet" href="./fonts/fonts.css">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body class="page">
+  <header class="header page__header">
+    <span class="logo">SARS-CoV-2</span>
+    <p class="header__stat">
+      <span class="header__description">Всего случаев:</span>
+      <span class="header__total">186 124</span>
+    </p>
+  </header>
+  <div class="content page__wrapper">
+    <h1 class="content__title">Данные о распространении коронавирусной инфекции SARS-CoV-2</h1>
+    <section class="total content__total">
+      <h2 class="total__title">Всего случаев • Live</h2>
+      <p class="total__number">186 124</p>
+    </section>
+    <section class="rating">
+      <h2 class="heading">Топ-10 стран по количеству случаев</h2>
+      <table class="table rating__table">
+        <tr class="table__row table__row_type_heading">
+          <th class="table__title">Страна</th>
+          <th class="table__title">Заболели</th>
+          <th class="table__title">Умерли</th>
+          <th class="table__title">Вылечились</th>
+        </tr>
+      </table>
+    </section>
+    <section class="mortality content__mortality">
+      <h2 class="heading">Самый высокий % смертности</h2>
+      <div class="diagram">
+      </div>
+    </section>
+  </div>
+  <footer class="footer page__footer">
+    <span>&copy; 2020 Источник данных — <a href="https://github.com/CSSEGISandData/COVID-19" target="_blank" class="footer__link">JHU CSSE</a></span>
+  </footer>
+
+
+  <template id="table-row">
+    <tr class="table__row">
+      <td class="table__data table__data-country"></td>
+      <td class="table__data table__data-confirmed"></td>
+      <td class="table__data table__data-deaths"></td>
+      <td class="table__data table__data-recovered"></td>
+    </tr>
+  </template>
+
+  <template id="diagram-row">
+    <div class="diagram__row">
+      <div class="diagram__caption">
+        <p class="diagram__country"></p>
+        <p class="diagram__analytics">
+          Смертность
+          <span class="diagram__data diagram__data_type_dead"></span> •
+          Вылечилось
+          <span class="diagram__data diagram__data_type_healed"></span>
+        </p>
+      </div>
+      <div class="diagram__line">
+        <div class="diagram__visualisation diagram__visualisation_type_healed"></div>
+        <div class="diagram__visualisation diagram__visualisation_type_dead"></div>
+      </div>
+    </div>
+  </template>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
