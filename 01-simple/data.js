@@ -1,5 +1,4 @@
-
-var data = [
+const data = [
   {
     "provinceState": "Tasmania",
     "countryRegion": "Australia",
