@@ -58,7 +58,7 @@ const process = (arr) => {
 
 document.addEventListener('DOMContentLoaded', function () {
   const ratingTable = document.querySelector('.rating__table');
-  const totatalNumberContainer = document.querySelector('.total__number');
+  const totalNumberContainer = document.querySelector('.total__number');
   const diagramContainer = document.querySelector('.diagram');
   const header = document.querySelector('.page__header');
   const headerTotal = document.querySelector('.header__total');
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const processedData = process(data);
   const sum = processedData.reduce((res, current) => res + current.confirmed, 0);
 
-  totatalNumberContainer.textContent = headerTotal.textContent= sum.toLocaleString('ru-RU');
+  totalNumberContainer.textContent = headerTotal.textContent= sum.toLocaleString('ru-RU');
 
   processedData
     .sort((a, b) => b.confirmed - a.confirmed)
